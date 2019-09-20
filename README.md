@@ -39,9 +39,16 @@ const inputForValidation = {
   ...
 };
 
-console.log(
-  inputValidate(inputForValidation, validateSchema, validateOptions)
-);
+(async() => {
+  try {
+    console.log(
+      await inputValidate(inputForValidation, validateSchema, validateOptions)
+    );
+  } catch (err) {
+    console.log(err);
+  }
+})();
+
 ```
 
 # Return result
