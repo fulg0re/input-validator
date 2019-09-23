@@ -17,7 +17,18 @@ const validateSchema = {
   ...
   email: {
     type: 'Email',
-    errorMessage: 'Email is not valid'
+    errorMessage: 'Email is not valid',
+    identical: '...other field name...' // used for match passwords
+  },
+  ...
+  password: {
+    type: 'String',
+    errorMessage: 'Password is not valid',
+    identical: 'confirmPassword' // used for matching two fields
+  },
+  confirmPassword: {
+    type: 'String',
+    errorMessage: 'Password is not valid',
   },
   ...
 };
